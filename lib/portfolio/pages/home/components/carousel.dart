@@ -27,7 +27,7 @@ class Carousel extends StatelessWidget {
             child: CarouselSlider(
               carouselController: carouselController,
               options: CarouselOptions(
-                // autoPlay: true,
+                autoPlay: true,
                 viewportFraction: 1,
                 scrollPhysics: const NeverScrollableScrollPhysics(),
                 height: carouselContainerHeight,

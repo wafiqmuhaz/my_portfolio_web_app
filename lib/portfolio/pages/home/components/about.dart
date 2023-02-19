@@ -6,6 +6,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../../models/technology.dart';
+import '../../../provider/theme.dart';
 import '../../../utils/constants.dart';
 import '../../../utils/screen_helper.dart';
 
@@ -123,12 +124,11 @@ class _AboutSectionState extends State<AboutSection> {
                                         cursor: SystemMouseCursors.click,
                                         child: Container(
                                           decoration: BoxDecoration(
-                                            color: Colors.grey[800],
-                                            // ref
-                                            //         .watch(themeProvider)
-                                            //         .isDarkMode
-                                            //     ? Colors.grey[800]
-                                            //     : Colors.grey[200],
+                                            color: ref
+                                                    .watch(themeProvider)
+                                                    .isDarkMode
+                                                ? Colors.grey[800]
+                                                : Colors.grey[200],
                                             borderRadius:
                                                 BorderRadius.circular(4),
                                           ),

@@ -6,6 +6,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../../models/design_process.dart';
 import '../../../models/name_color.dart';
+import '../../../provider/theme.dart';
 import '../../../utils/constants.dart';
 import '../../../utils/screen_helper.dart';
 import '../../../utils/utils.dart';
@@ -162,10 +163,9 @@ class ServiceSection extends StatelessWidget {
                         width: 200,
                         margin: const EdgeInsets.all(20),
                         decoration: BoxDecoration(
-                          color: const Color.fromARGB(75, 12, 12, 7),
-                          // ref.watch(themeProvider).isDarkMode
-                          //     ? const Color.fromARGB(75, 12, 12, 7)
-                          //     : Colors.grey[50],
+                          color: ref.watch(themeProvider).isDarkMode
+                              ? const Color.fromARGB(75, 12, 12, 7)
+                              : Colors.grey[50],
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Column(
@@ -176,10 +176,9 @@ class ServiceSection extends StatelessWidget {
                               width: 80,
                               height: 80,
                               decoration: BoxDecoration(
-                                color: Colors.grey[900],
-                                //  ref.watch(themeProvider).isDarkMode
-                                //     ? Colors.grey[900]
-                                //     : Colors.grey[200],
+                                color: ref.watch(themeProvider).isDarkMode
+                                    ? Colors.grey[900]
+                                    : Colors.grey[200],
                                 borderRadius: BorderRadius.circular(80),
                               ),
                               child: Icon(
@@ -195,7 +194,9 @@ class ServiceSection extends StatelessWidget {
                               e.title,
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                color: Colors.grey[800],
+                                color: ref.watch(themeProvider).isDarkMode
+                                    ? Colors.grey[400]
+                                    : Colors.grey[800],
                                 fontSize: 20,
                                 fontWeight: FontWeight.w800,
                               ),

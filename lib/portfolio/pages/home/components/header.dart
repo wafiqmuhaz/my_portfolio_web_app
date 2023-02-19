@@ -6,6 +6,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../../models/header_item.dart';
 import '../../../provider/home.dart';
+import '../../../provider/theme.dart';
 import '../../../routes/routes.dart';
 import '../../../utils/constants.dart';
 import '../../../utils/globals.dart';
@@ -27,16 +28,18 @@ class HeaderLogo extends StatelessWidget {
               Navigator.pushNamed(context, Routes.initial);
             },
             child: RichText(
-              text: const TextSpan(
+              text: TextSpan(
                 children: [
                   TextSpan(
                     text: 'Wafiq ',
                     style: TextStyle(
-                      //   color: ref.watch(themeProvider).isDarkMode
-                      //       ? Colors.white
-                      //       : Colors.black,
+                      color: ref.watch(themeProvider).isDarkMode
+                          ? Colors.white
+                          : Colors.black,
                       height: 1.5,
-                      fontSize: 15,
+                      fontSize: 26,
+                      letterSpacing: 1.5,
+                      fontWeight: FontWeight.bold,
                     ),
                     // GoogleFonts.josefinSans(
                     //   fontSize: 26,
@@ -50,9 +53,10 @@ class HeaderLogo extends StatelessWidget {
                   TextSpan(
                     text: 'Muhaz',
                     style: TextStyle(
-                      color: kCaptionColor,
-                      height: 1.5,
-                      fontSize: 15,
+                      color: kPrimaryColor,
+                      fontSize: 26.0,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1.5,
                     ),
                     // GoogleFonts.josefinSans(
                     //   color: kPrimaryColor,

@@ -61,9 +61,8 @@ class PortfolioStats extends StatelessWidget {
                           child: Text(
                             stat.count,
                             style: const TextStyle(
-                              color: kCaptionColor,
-                              height: 1.5,
-                              fontSize: 15,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 32,
                             ),
                             // GoogleFonts.josefinSans(
                             //   fontWeight: FontWeight.w700,

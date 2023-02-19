@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../models/project.dart';
+import '../../../provider/theme.dart';
 import '../../../utils/constants.dart';
 import '../../../utils/screen_helper.dart';
 import '../../../utils/utils.dart';
@@ -52,10 +53,9 @@ class ProjectSection extends StatelessWidget {
               return Container(
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
-                    color: const Color.fromARGB(75, 12, 12, 7),
-                    // ref.watch(themeProvider).isDarkMode
-                    //     ? const Color.fromARGB(75, 12, 12, 7)
-                    //     : Colors.grey[100],
+                    color: ref.watch(themeProvider).isDarkMode
+                        ? const Color.fromARGB(75, 12, 12, 7)
+                        : Colors.grey[100],
                     borderRadius: BorderRadius.circular(5)),
                 child: Flex(
                   direction: ScreenHelper.isMobile(context)
@@ -88,9 +88,9 @@ class ProjectSection extends StatelessWidget {
                           Text(
                             projectModel.project,
                             style: const TextStyle(
-                              color: kCaptionColor,
-                              height: 1.5,
-                              fontSize: 15,
+                              color: kPrimaryColor,
+                              fontWeight: FontWeight.w900,
+                              fontSize: 16.0,
                             ),
                             //  GoogleFonts.josefinSans(
                             //   color: kPrimaryColor,
@@ -104,9 +104,9 @@ class ProjectSection extends StatelessWidget {
                           Text(
                             projectModel.title,
                             style: const TextStyle(
-                              color: kCaptionColor,
-                              height: 1.5,
-                              fontSize: 15,
+                              fontWeight: FontWeight.w900,
+                              height: 1.3,
+                              fontSize: 28.0,
                             ),
                             // style: GoogleFonts.josefinSans(
                             //   fontWeight: FontWeight.w900,
@@ -133,9 +133,8 @@ class ProjectSection extends StatelessWidget {
                               : const Text(
                                   "Technologies Used",
                                   style: TextStyle(
-                                    color: kCaptionColor,
                                     fontWeight: FontWeight.w900,
-                                    fontSize: 16,
+                                    fontSize: 16.0,
                                   ),
                                   // style: GoogleFonts.josefinSans(
                                   //   fontWeight: FontWeight.w900,

@@ -24,8 +24,9 @@ List<CarouselItemModel> carouselItems(double carouselContainerHeight) =>
                       'Flutter Application Developer',
                       style: TextStyle(
                         color: kCaptionColor,
-                        height: 1.5,
-                        fontSize: 15,
+                        fontWeight: FontWeight.w900,
+                        fontSize: 18,
+                        letterSpacing: 2,
                       ),
                       // GoogleFonts.josefinSans(
                       //   color: kPrimaryColor,
@@ -42,7 +43,9 @@ List<CarouselItemModel> carouselItems(double carouselContainerHeight) =>
                       style: const TextStyle(
                         color: kCaptionColor,
                         height: 1.5,
-                        fontSize: 15,
+                        fontSize: 40.0,
+                        fontWeight: FontWeight.w900,
+                        letterSpacing: 2.3,
                       ),
                       // GoogleFonts.josefinSans(
                       //   fontSize: 40,

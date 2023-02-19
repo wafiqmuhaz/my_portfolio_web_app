@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_unnecessary_containers, always_use_package_imports
+// ignore_for_file: avoid_unnecessary_containers, always_use_package_imports, unnecessary_lambdas
 
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
@@ -10,13 +10,14 @@ import '../../../utils/utils.dart';
 
 final List<FooterItem> footerItems = [
   FooterItem(
-      iconData: Icons.location_on,
-      title: 'ADDRESS',
-      text1: 'Soreang, Bandung',
-      text2: 'Indonesia',
-      onTap: () {
-        Utilty.openMyLocation();
-      }),
+    iconData: Icons.location_on,
+    title: 'ADDRESS',
+    text1: 'Soreang, Bandung',
+    text2: 'Indonesia',
+    onTap: () {
+      Utilty.openMyLocation();
+    },
+  ),
   FooterItem(
       iconData: Icons.phone,
       title: 'PHONE',
@@ -103,8 +104,8 @@ Widget _buildUi(double width, BuildContext context) {
                                         footerItem.title,
                                         style: const TextStyle(
                                           color: kCaptionColor,
-                                          height: 1.5,
-                                          fontSize: 15,
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.w700,
                                         ),
                                         // GoogleFonts.josefinSans(
                                         //   fontSize: 18.0,
