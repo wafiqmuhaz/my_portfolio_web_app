@@ -1,4 +1,4 @@
-// ignore_for_file: use_key_in_widget_constructors, avoid_unnecessary_containers, always_use_package_imports
+// ignore_for_file: use_key_in_widget_constructors, avoid_unnecessary_containers, always_use_package_imports, lines_longer_than_80_chars, avoid_redundant_argument_values
 
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
@@ -37,15 +37,15 @@ class PortfolioStats extends StatelessWidget {
         child: LayoutBuilder(
           builder: (BuildContext context, BoxConstraints constraint) {
             return Wrap(
-              spacing: 20.0,
-              runSpacing: 20.0,
+              spacing: 20,
+              runSpacing: 20,
               children: stats.map((stat) {
                 return Container(
-                  padding: const EdgeInsets.symmetric(vertical: 15.0),
+                  padding: const EdgeInsets.symmetric(vertical: 15),
                   // Just use the helper here really
                   width: ScreenHelper.isMobile(context)
-                      ? constraint.maxWidth / 2.0 - 20
-                      : (constraint.maxWidth / 4.0 - 20),
+                      ? constraint.maxWidth / 2 - 20
+                      : (constraint.maxWidth / 4 - 20),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -66,7 +66,7 @@ class PortfolioStats extends StatelessWidget {
                             ),
                             // GoogleFonts.josefinSans(
                             //   fontWeight: FontWeight.w700,
-                            //   fontSize: 32.0,
+                            //   fontSize: 32,
                             // ),
                           ),
                         ),
@@ -75,16 +75,16 @@ class PortfolioStats extends StatelessWidget {
                       //   stat.count,
                       //   style: GoogleFonts.josefinSans(
                       //     fontWeight: FontWeight.w700,
-                      //     fontSize: 32.0,
+                      //     fontSize: 32,
                       //   ),
                       // ),
                       const SizedBox(
-                        width: 10.0,
+                        width: 10,
                       ),
                       Text(
                         stat.text,
                         style: const TextStyle(
-                          fontSize: 16.0,
+                          fontSize: 16,
                           color: kCaptionColor,
                         ),
                       )

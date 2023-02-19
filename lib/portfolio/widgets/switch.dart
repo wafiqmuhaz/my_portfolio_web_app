@@ -1,4 +1,4 @@
-// ignore_for_file: library_private_types_in_public_api
+// ignore_for_file: library_private_types_in_public_api, always_use_package_imports, use_super_parameters, sort_constructors_first, lines_longer_than_80_chars, always_put_required_named_parameters_first, strict_raw_type
 
 import 'package:flutter/material.dart';
 
@@ -24,13 +24,21 @@ class _CustomSwitchState extends State<CustomSwitch>
   void initState() {
     super.initState();
     _animationController = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: 60));
+      vsync: this,
+      duration: const Duration(
+        milliseconds: 60,
+      ),
+    );
 
     _circleAnimation = AlignmentTween(
-            begin: widget.value ? Alignment.centerRight : Alignment.centerLeft,
-            end: widget.value ? Alignment.centerLeft : Alignment.centerRight)
-        .animate(CurvedAnimation(
-            parent: _animationController, curve: Curves.linear));
+      begin: widget.value ? Alignment.centerRight : Alignment.centerLeft,
+      end: widget.value ? Alignment.centerLeft : Alignment.centerRight,
+    ).animate(
+      CurvedAnimation(
+        parent: _animationController,
+        curve: Curves.linear,
+      ),
+    );
     _animationController.forward();
   }
 
@@ -54,7 +62,8 @@ class _CustomSwitchState extends State<CustomSwitch>
               _animationController.forward();
             }
             debugPrint(
-                "_animationController: ${_animationController.isCompleted}");
+              '_animationController: ${_animationController.isCompleted}',
+            );
             widget.value == false
                 ? widget.onChanged(true)
                 : widget.onChanged(false);

@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import, always_use_package_imports, prefer_const_constructors, lines_longer_than_80_chars
+
 import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

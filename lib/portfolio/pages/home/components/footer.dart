@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_unnecessary_containers, always_use_package_imports, unnecessary_lambdas
+// ignore_for_file: avoid_unnecessary_containers, always_use_package_imports, unnecessary_lambdas, lines_longer_than_80_chars, use_super_parameters, avoid_redundant_argument_values
 
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
@@ -19,29 +19,32 @@ final List<FooterItem> footerItems = [
     },
   ),
   FooterItem(
-      iconData: Icons.phone,
-      title: 'PHONE',
-      text1: '+62 8995258011',
-      text2: '',
-      onTap: () {
-        Utilty.openMyPhoneNo();
-      }),
+    iconData: Icons.phone,
+    title: 'PHONE',
+    text1: '+62 8995258011',
+    text2: '',
+    onTap: () {
+      Utilty.openMyPhoneNo();
+    },
+  ),
   FooterItem(
-      iconData: Icons.mail,
-      title: 'EMAIL',
-      text1: 'wafiqmuhaz@gmail.com',
-      text2: '',
-      onTap: () {
-        Utilty.openMail();
-      }),
+    iconData: Icons.mail,
+    title: 'EMAIL',
+    text1: 'wafiqmuhaz@gmail.com',
+    text2: '',
+    onTap: () {
+      Utilty.openMail();
+    },
+  ),
   FooterItem(
-      iconData: Icons.sms,
-      title: 'WHATSAPP',
-      text1: '+62 8995258011',
-      text2: '',
-      onTap: () {
-        Utilty.openWhatsapp();
-      })
+    iconData: Icons.sms,
+    title: 'WHATSAPP',
+    text1: '+62 8995258011',
+    text2: '',
+    onTap: () {
+      Utilty.openWhatsapp();
+    },
+  ),
 ];
 
 class Footer extends StatelessWidget {
@@ -71,10 +74,10 @@ Widget _buildUi(double width, BuildContext context) {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 50.0),
+                padding: const EdgeInsets.symmetric(vertical: 50),
                 child: Wrap(
-                  spacing: 20.0,
-                  runSpacing: 20.0,
+                  spacing: 20,
+                  runSpacing: 20,
                   children: footerItems
                       .map(
                         (footerItem) => MouseRegion(
@@ -83,8 +86,8 @@ Widget _buildUi(double width, BuildContext context) {
                             onTap: footerItem.onTap,
                             child: SizedBox(
                               width: ScreenHelper.isMobile(context)
-                                  ? constraints.maxWidth / 2.0 - 20.0
-                                  : constraints.maxWidth / 4.0 - 20.0,
+                                  ? constraints.maxWidth / 2 - 20
+                                  : constraints.maxWidth / 4 - 20,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -98,7 +101,7 @@ Widget _buildUi(double width, BuildContext context) {
                                         size: 28,
                                       ),
                                       const SizedBox(
-                                        width: 15.0,
+                                        width: 15,
                                       ),
                                       Text(
                                         footerItem.title,
@@ -108,14 +111,14 @@ Widget _buildUi(double width, BuildContext context) {
                                           fontWeight: FontWeight.w700,
                                         ),
                                         // GoogleFonts.josefinSans(
-                                        //   fontSize: 18.0,
+                                        //   fontSize: 18,
                                         //   fontWeight: FontWeight.w700,
                                         // ),
                                       ),
                                     ],
                                   ),
                                   const SizedBox(
-                                    height: 10.0,
+                                    height: 10,
                                   ),
                                   RichText(
                                     textAlign: TextAlign.start,
@@ -147,14 +150,14 @@ Widget _buildUi(double width, BuildContext context) {
                 ),
               ),
               const SizedBox(
-                height: 20.0,
+                height: 20,
               ),
               Flex(
                 direction: Axis.horizontal,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
                   Padding(
-                    padding: EdgeInsets.only(bottom: 8.0),
+                    padding: EdgeInsets.only(bottom: 8),
                     child: Text(
                       'Developed in 💛 with Flutter',
                       style: TextStyle(

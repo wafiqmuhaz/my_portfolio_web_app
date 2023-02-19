@@ -1,4 +1,4 @@
-// ignore_for_file: unused_field, use_key_in_widget_constructors, use_colored_box
+// ignore_for_file: unused_field, use_key_in_widget_constructors, use_colored_box, always_use_package_imports, use_super_parameters, lines_longer_than_80_chars, avoid_redundant_argument_values
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -40,39 +40,40 @@ class _DemoScreenState extends ConsumerState<DemoScreen> {
                   height: ScreenHelper.isDesktop(context) ? 30 : 20,
                 ),
                 Center(
-                    child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: const [
-                    SizedBox(
-                      height: 80,
-                    ),
-                    Text(
-                      'Demos',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w900,
-                        fontSize: 36,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: const [
+                      SizedBox(
+                        height: 80,
                       ),
-                      // GoogleFonts.josefinSans(
-                      //   fontWeight: FontWeight.w900,
-                      //   fontSize: 36,
-                      // ),
-                    ),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Text(
-                      'Here are some of my Demos :)',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w900,
-                        fontSize: 36,
+                      Text(
+                        'Demos',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w900,
+                          fontSize: 36,
+                        ),
+                        // GoogleFonts.josefinSans(
+                        //   fontWeight: FontWeight.w900,
+                        //   fontSize: 36,
+                        // ),
                       ),
-                    ),
-                    SizedBox(
-                      height: 15,
-                    )
-                  ],
-                )),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text(
+                        'Here are some of my Demos :)',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w900,
+                          fontSize: 36,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 15,
+                      )
+                    ],
+                  ),
+                ),
                 // DemoSection(
                 //   projects: ProjectModel.demos,
                 // ),
@@ -101,7 +102,8 @@ class DemoHeader extends StatelessWidget {
       color: Theme.of(context).scaffoldBackgroundColor.withOpacity(0.95),
       child: Container(
         padding: EdgeInsets.symmetric(
-            horizontal: ScreenHelper.isDesktop(context) ? 24 : 16.0),
+          horizontal: ScreenHelper.isDesktop(context) ? 24 : 16.0,
+        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: const [

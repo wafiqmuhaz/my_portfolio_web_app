@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_overrides, always_use_package_imports, use_super_parameters, unused_import
+// ignore_for_file: unnecessary_overrides, always_use_package_imports, use_super_parameters, unused_import, lines_longer_than_80_chars, avoid_redundant_argument_values
 
 import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 import 'package:flutter/material.dart';
@@ -71,25 +71,26 @@ class _HomeState extends ConsumerState<Home>
                   height: 100,
                 ),
                 Center(
-                    child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    const Text(
-                      'Portfolio',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w900,
-                        fontSize: 36,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      const Text(
+                        'Portfolio',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w900,
+                          fontSize: 36,
+                        ),
+                        // style: GoogleFonts.josefinSans(
+                        //   fontWeight: FontWeight.w900,
+                        //   fontSize: 36,
+                        // ),
                       ),
-                      // style: GoogleFonts.josefinSans(
-                      //   fontWeight: FontWeight.w900,
-                      //   fontSize: 36,
-                      // ),
-                    ),
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    Text('Here are some of my Previous Work :)',
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      Text(
+                        'Here are some of my Previous Work :)',
                         style: TextStyle(
                           color: Colors.grey[400],
                           fontSize: 14,
@@ -98,17 +99,21 @@ class _HomeState extends ConsumerState<Home>
                         //   color: Colors.grey[400],
                         //   fontSize: 14,
                         // ),
-                        ),
-                    const SizedBox(
-                      height: 15,
-                    )
-                  ],
-                )),
+                        ,
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      )
+                    ],
+                  ),
+                ),
                 ProjectSection(
                   projects: ProjectModel.projects,
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 28),
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 28,
+                  ),
                   child: PortfolioStats(),
                 ),
                 const SizedBox(
@@ -123,19 +128,21 @@ class _HomeState extends ConsumerState<Home>
         ),
         Header(
           themeSwitch: ThemeSwitcher(
-              clipper: const ThemeSwitcherBoxClipper(),
-              builder: (context) {
-                return CustomSwitch(
-                  value: ref.watch(themeProvider).isDarkMode,
-                  onChanged: (val) {
-                    ref.read(themeProvider).changeTheme(val);
-                    ThemeSwitcher.of(context).changeTheme(
-                        theme: ref.read(themeProvider).getCurrentTheme,
-                        isReversed: false // default: false
-                        );
-                  },
-                );
-              }),
+            clipper: const ThemeSwitcherBoxClipper(),
+            builder: (context) {
+              return CustomSwitch(
+                value: ref.watch(themeProvider).isDarkMode,
+                onChanged: (val) {
+                  ref.read(themeProvider).changeTheme(val);
+                  ThemeSwitcher.of(context).changeTheme(
+                    theme: ref.read(themeProvider).getCurrentTheme,
+                    isReversed: false // default: false
+                    ,
+                  );
+                },
+              );
+            },
+          ),
         ),
       ],
     );
@@ -161,7 +168,8 @@ class _HomeState extends ConsumerState<Home>
                         if (Globals.scaffoldKey.currentState!.isEndDrawerOpen) {
                           Navigator.pop(context);
                           _homeProvider.scrollBasedOnHeader(
-                              HeaderRow.headerItems[index]);
+                            HeaderRow.headerItems[index],
+                          );
                         }
                       }
                     },
@@ -181,11 +189,12 @@ class _HomeState extends ConsumerState<Home>
                                   onChanged: (val) {
                                     ref.read(themeProvider).changeTheme(val);
                                     ThemeSwitcher.of(context).changeTheme(
-                                        theme: ref
-                                            .read(themeProvider)
-                                            .getCurrentTheme,
-                                        isReversed: false // default: false
-                                        );
+                                      theme: ref
+                                          .read(themeProvider)
+                                          .getCurrentTheme,
+                                      isReversed: false // default: false
+                                      ,
+                                    );
                                   },
                                 ),
                               )

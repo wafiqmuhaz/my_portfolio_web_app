@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_final_locals, omit_local_variable_types, no_leading_underscores_for_local_identifiers, cascade_invocations
+// ignore_for_file: prefer_final_locals, omit_local_variable_types, no_leading_underscores_for_local_identifiers, cascade_invocations, lines_longer_than_80_chars, always_use_package_imports, use_super_parameters, always_put_required_named_parameters_first, unnecessary_to_list_in_spreads, use_colored_box
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -18,60 +18,62 @@ class HeaderLogo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer(builder: (context, ref, _) {
-      return Container(
-        padding: const EdgeInsets.all(20),
-        child: MouseRegion(
-          cursor: SystemMouseCursors.click,
-          child: GestureDetector(
-            onTap: () {
-              Navigator.pushNamed(context, Routes.initial);
-            },
-            child: RichText(
-              text: TextSpan(
-                children: [
-                  TextSpan(
-                    text: 'Wafiq ',
-                    style: TextStyle(
-                      color: ref.watch(themeProvider).isDarkMode
-                          ? Colors.white
-                          : Colors.black,
-                      height: 1.5,
-                      fontSize: 26,
-                      letterSpacing: 1.5,
-                      fontWeight: FontWeight.bold,
+    return Consumer(
+      builder: (context, ref, _) {
+        return Container(
+          padding: const EdgeInsets.all(20),
+          child: MouseRegion(
+            cursor: SystemMouseCursors.click,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, Routes.initial);
+              },
+              child: RichText(
+                text: TextSpan(
+                  children: [
+                    TextSpan(
+                      text: 'Wafiq ',
+                      style: TextStyle(
+                        color: ref.watch(themeProvider).isDarkMode
+                            ? Colors.white
+                            : Colors.black,
+                        height: 1.5,
+                        fontSize: 26,
+                        letterSpacing: 1.5,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      // GoogleFonts.josefinSans(
+                      //   fontSize: 26,
+                      //   fontWeight: FontWeight.bold,
+                      //   letterSpacing: 1.5,
+                      //   color: ref.watch(themeProvider).isDarkMode
+                      //       ? Colors.white
+                      //       : Colors.black,
+                      // ),
                     ),
-                    // GoogleFonts.josefinSans(
-                    //   fontSize: 26,
-                    //   fontWeight: FontWeight.bold,
-                    //   letterSpacing: 1.5,
-                    //   color: ref.watch(themeProvider).isDarkMode
-                    //       ? Colors.white
-                    //       : Colors.black,
-                    // ),
-                  ),
-                  TextSpan(
-                    text: 'Muhaz',
-                    style: TextStyle(
-                      color: kPrimaryColor,
-                      fontSize: 26.0,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 1.5,
-                    ),
-                    // GoogleFonts.josefinSans(
-                    //   color: kPrimaryColor,
-                    //   fontSize: 26,
-                    //   fontWeight: FontWeight.bold,
-                    //   letterSpacing: 1.5,
-                    // ),
-                  )
-                ],
+                    const TextSpan(
+                      text: 'Muhaz',
+                      style: TextStyle(
+                        color: kPrimaryColor,
+                        fontSize: 26,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 1.5,
+                      ),
+                      // GoogleFonts.josefinSans(
+                      //   color: kPrimaryColor,
+                      //   fontSize: 26,
+                      //   fontWeight: FontWeight.bold,
+                      //   letterSpacing: 1.5,
+                      // ),
+                    )
+                  ],
+                ),
               ),
             ),
           ),
-        ),
-      );
-    });
+        );
+      },
+    );
   }
 }
 
@@ -131,40 +133,42 @@ class HeaderRow extends StatelessWidget {
       ],
       child: Consumer(
         builder: (context, ref, child) {
-          return Row(children: [
-            ...headerItems
-                .map(
-                  (item) => item.title == 'Themes'
-                      ? const Text('')
-                      : MouseRegion(
-                          cursor: SystemMouseCursors.click,
-                          child: Container(
-                            margin: const EdgeInsets.only(right: 30),
-                            child: GestureDetector(
-                              onTap: () {
-                                item.onTap();
-                                HomeProvider _homeProvider =
-                                    ref.read(homeProvider);
-                                _homeProvider.scrollBasedOnHeader(item);
-                              },
-                              child: Text(
-                                item.title,
-                                style: TextStyle(
-                                  color: item.title == 'Blogs'
-                                      ? kPrimaryColor
-                                      : null,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.bold,
-                                  letterSpacing: 2,
+          return Row(
+            children: [
+              ...headerItems
+                  .map(
+                    (item) => item.title == 'Themes'
+                        ? const Text('')
+                        : MouseRegion(
+                            cursor: SystemMouseCursors.click,
+                            child: Container(
+                              margin: const EdgeInsets.only(right: 30),
+                              child: GestureDetector(
+                                onTap: () {
+                                  item.onTap();
+                                  HomeProvider _homeProvider =
+                                      ref.read(homeProvider);
+                                  _homeProvider.scrollBasedOnHeader(item);
+                                },
+                                child: Text(
+                                  item.title,
+                                  style: TextStyle(
+                                    color: item.title == 'Blogs'
+                                        ? kPrimaryColor
+                                        : null,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 2,
+                                  ),
                                 ),
                               ),
                             ),
                           ),
-                        ),
-                )
-                .toList(),
-            themeSwitch
-          ]);
+                  )
+                  .toList(),
+              themeSwitch
+            ],
+          );
         },
       ),
     );
@@ -215,7 +219,8 @@ class Header extends StatelessWidget {
       color: Theme.of(context).scaffoldBackgroundColor.withOpacity(0.95),
       child: Container(
         padding: EdgeInsets.symmetric(
-            horizontal: ScreenHelper.isDesktop(context) ? 24 : 16),
+          horizontal: ScreenHelper.isDesktop(context) ? 24 : 16,
+        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

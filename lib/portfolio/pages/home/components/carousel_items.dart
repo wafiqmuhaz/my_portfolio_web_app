@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_unnecessary_containers
+// ignore_for_file: avoid_unnecessary_containers, always_use_package_imports
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -43,7 +43,7 @@ List<CarouselItemModel> carouselItems(double carouselContainerHeight) =>
                       style: const TextStyle(
                         color: kCaptionColor,
                         height: 1.5,
-                        fontSize: 40.0,
+                        fontSize: 40,
                         fontWeight: FontWeight.w900,
                         letterSpacing: 2.3,
                       ),
@@ -128,15 +128,17 @@ List<CarouselItemModel> carouselItems(double carouselContainerHeight) =>
                     mainAxisAlignment: MainAxisAlignment.end,
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: AppConstants.socialLoginDatas
-                        .map((e) => InkWell(
-                              onTap: e.onTap,
-                              child: Container(
-                                width: 20,
-                                height: 20,
-                                margin: const EdgeInsets.all(10),
-                                child: Image.asset(e.title),
-                              ),
-                            ))
+                        .map(
+                          (e) => InkWell(
+                            onTap: e.onTap,
+                            child: Container(
+                              width: 20,
+                              height: 20,
+                              margin: const EdgeInsets.all(10),
+                              child: Image.asset(e.title),
+                            ),
+                          ),
+                        )
                         .toList(),
                   ),
                 ),

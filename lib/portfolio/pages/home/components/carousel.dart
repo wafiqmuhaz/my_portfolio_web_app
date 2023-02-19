@@ -1,4 +1,4 @@
-// ignore_for_file: always_use_package_imports, use_super_parameters, sort_constructors_first, lines_longer_than_80_chars
+// ignore_for_file: always_use_package_imports, use_super_parameters, sort_constructors_first, lines_longer_than_80_chars, prefer_final_locals, omit_local_variable_types, avoid_redundant_argument_values
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';

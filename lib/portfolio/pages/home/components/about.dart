@@ -1,4 +1,4 @@
-// ignore_for_file: lines_longer_than_80_chars
+// ignore_for_file: lines_longer_than_80_chars, always_use_package_imports, use_super_parameters, avoid_redundant_argument_values
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -34,7 +34,7 @@ class _AboutSectionState extends State<AboutSection> {
           return ResponsiveWrapper(
             maxWidth: width,
             minWidth: width,
-            defaultScale: false,
+            // defaultScale: false,
             child: Flex(
               direction:
                   constraints.maxWidth > 720 ? Axis.horizontal : Axis.vertical,
@@ -112,15 +112,17 @@ class _AboutSectionState extends State<AboutSection> {
                       const SizedBox(
                         height: 10,
                       ),
-                      Consumer(builder: (context, ref, _) {
-                        return ScrollConfiguration(
-                          behavior: ScrollConfiguration.of(context)
-                              .copyWith(scrollbars: false),
-                          child: SingleChildScrollView(
-                            scrollDirection: Axis.horizontal,
-                            child: Row(
-                              children: TechnologyConstants.technologyLearned
-                                  .map((e) => MouseRegion(
+                      Consumer(
+                        builder: (context, ref, _) {
+                          return ScrollConfiguration(
+                            behavior: ScrollConfiguration.of(context)
+                                .copyWith(scrollbars: false),
+                            child: SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Row(
+                                children: TechnologyConstants.technologyLearned
+                                    .map(
+                                      (e) => MouseRegion(
                                         cursor: SystemMouseCursors.click,
                                         child: Container(
                                           decoration: BoxDecoration(
@@ -165,12 +167,14 @@ class _AboutSectionState extends State<AboutSection> {
                                             ),
                                           ),
                                         ),
-                                      ))
-                                  .toList(),
+                                      ),
+                                    )
+                                    .toList(),
+                              ),
                             ),
-                          ),
-                        );
-                      }),
+                          );
+                        },
+                      ),
                       const SizedBox(
                         height: 70,
                       )

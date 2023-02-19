@@ -31,12 +31,18 @@ class ProjectSection extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         child: Row(
           children: projects
-              .map((e) => Container(
+              .map(
+                (e) => Container(
                   margin: const EdgeInsets.symmetric(
                     horizontal: 20,
                     vertical: 15,
                   ),
-                  child: _buildProject(width, e)))
+                  child: _buildProject(
+                    width,
+                    e,
+                  ),
+                ),
+              )
               .toList(),
         ),
       ),
@@ -49,101 +55,106 @@ class ProjectSection extends StatelessWidget {
         builder: (context, constraints) {
           return SizedBox(
             width: width,
-            child: Consumer(builder: (context, ref, _) {
-              return Container(
-                padding: const EdgeInsets.all(20),
-                decoration: BoxDecoration(
+            child: Consumer(
+              builder: (context, ref, _) {
+                return Container(
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
                     color: ref.watch(themeProvider).isDarkMode
                         ? const Color.fromARGB(75, 12, 12, 7)
                         : Colors.grey[100],
-                    borderRadius: BorderRadius.circular(5)),
-                child: Flex(
-                  direction: ScreenHelper.isMobile(context)
-                      ? Axis.vertical
-                      : Axis.horizontal,
-                  children: [
-                    SizedBox(
-                      width: ScreenHelper.isMobile(context)
-                          ? width * 0.9
-                          : width * 0.46,
-                      child: Image.asset(
-                        projectModel.appPhotos,
-                        width: constraints.maxWidth > 720 ? null : 350,
-                        height: 250,
+                    borderRadius: BorderRadius.circular(
+                      5,
+                    ),
+                  ),
+                  child: Flex(
+                    direction: ScreenHelper.isMobile(context)
+                        ? Axis.vertical
+                        : Axis.horizontal,
+                    children: [
+                      SizedBox(
+                        width: ScreenHelper.isMobile(context)
+                            ? width * 0.9
+                            : width * 0.46,
+                        child: Image.asset(
+                          projectModel.appPhotos,
+                          width: constraints.maxWidth > 720 ? null : 350,
+                          height: 250,
+                        ),
                       ),
-                    ),
 
-                    const SizedBox(
-                      width: 20,
-                      height: 20,
-                    ),
-                    SizedBox(
-                      width: ScreenHelper.isMobile(context)
-                          ? width * 0.9
-                          : width * 0.45,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            projectModel.project,
-                            style: const TextStyle(
-                              color: kPrimaryColor,
-                              fontWeight: FontWeight.w900,
-                              fontSize: 16.0,
+                      const SizedBox(
+                        width: 20,
+                        height: 20,
+                      ),
+                      SizedBox(
+                        width: ScreenHelper.isMobile(context)
+                            ? width * 0.9
+                            : width * 0.45,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              projectModel.project,
+                              style: const TextStyle(
+                                color: kPrimaryColor,
+                                fontWeight: FontWeight.w900,
+                                fontSize: 16,
+                              ),
+                              //  GoogleFonts.josefinSans(
+                              //   color: kPrimaryColor,
+                              //   fontWeight: FontWeight.w900,
+                              //   fontSize: 16,
+                              // ),
                             ),
-                            //  GoogleFonts.josefinSans(
-                            //   color: kPrimaryColor,
-                            //   fontWeight: FontWeight.w900,
-                            //   fontSize: 16,
-                            // ),
-                          ),
-                          const SizedBox(
-                            height: 15,
-                          ),
-                          Text(
-                            projectModel.title,
-                            style: const TextStyle(
-                              fontWeight: FontWeight.w900,
-                              height: 1.3,
-                              fontSize: 28.0,
+                            const SizedBox(
+                              height: 15,
                             ),
-                            // style: GoogleFonts.josefinSans(
-                            //   fontWeight: FontWeight.w900,
-                            //   height: 1.3,
-                            //   fontSize: 28,
-                            // ),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            projectModel.description,
-                            style: const TextStyle(
-                              color: kCaptionColor,
-                              height: 1.5,
-                              fontSize: 15,
+                            Text(
+                              projectModel.title,
+                              style: const TextStyle(
+                                fontWeight: FontWeight.w900,
+                                height: 1.3,
+                                fontSize: 28,
+                              ),
+                              // style: GoogleFonts.josefinSans(
+                              //   fontWeight: FontWeight.w900,
+                              //   height: 1.3,
+                              //   fontSize: 28,
+                              // ),
                             ),
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          projectModel.techUsed.isEmpty
-                              ? Container()
-                              : const Text(
-                                  "Technologies Used",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w900,
-                                    fontSize: 16.0,
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              projectModel.description,
+                              style: const TextStyle(
+                                color: kCaptionColor,
+                                height: 1.5,
+                                fontSize: 15,
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 20,
+                            ),
+                            projectModel.techUsed.isEmpty
+                                ? Container()
+                                : const Text(
+                                    "Technologies Used",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w900,
+                                      fontSize: 16,
+                                    ),
+                                    // style: GoogleFonts.josefinSans(
+                                    //   fontWeight: FontWeight.w900,
+                                    //   fontSize: 16,
+                                    // ),
                                   ),
-                                  // style: GoogleFonts.josefinSans(
-                                  //   fontWeight: FontWeight.w900,
-                                  //   fontSize: 16,
-                                  // ),
-                                ),
-                          Wrap(
-                            children: projectModel.techUsed
-                                .map((e) => Container(
+                            Wrap(
+                              children: projectModel.techUsed
+                                  .map(
+                                    (e) => Container(
                                       margin: const EdgeInsets.all(10),
                                       width: 25,
                                       color:
@@ -152,56 +163,60 @@ class ProjectSection extends StatelessWidget {
                                               : null,
                                       height: 25,
                                       child: Image.asset(e.logo),
-                                    ))
-                                .toList(),
-                          ),
-                          const SizedBox(
-                            height: 25,
-                          ),
-                          Row(
-                            children: [
-                              MouseRegion(
-                                cursor: SystemMouseCursors.click,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    color: kPrimaryColor,
-                                    borderRadius: BorderRadius.circular(8),
-                                  ),
-                                  height: 48,
-                                  padding: const EdgeInsets.symmetric(
-                                    horizontal: 28,
-                                  ),
-                                  child: TextButton(
-                                    onPressed: () {
-                                      Utilty.openUrl(projectModel.projectLink);
-                                    },
-                                    child: Center(
-                                      child: Text(
-                                        (projectModel.buttonText ??
-                                                "Explore MORE")
-                                            .toUpperCase(),
-                                        style: const TextStyle(
-                                          fontSize: 13,
-                                          fontWeight: FontWeight.bold,
+                                    ),
+                                  )
+                                  .toList(),
+                            ),
+                            const SizedBox(
+                              height: 25,
+                            ),
+                            Row(
+                              children: [
+                                MouseRegion(
+                                  cursor: SystemMouseCursors.click,
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      color: kPrimaryColor,
+                                      borderRadius: BorderRadius.circular(8),
+                                    ),
+                                    height: 48,
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 28,
+                                    ),
+                                    child: TextButton(
+                                      onPressed: () {
+                                        Utilty.openUrl(
+                                          projectModel.projectLink,
+                                        );
+                                      },
+                                      child: Center(
+                                        child: Text(
+                                          (projectModel.buttonText ??
+                                                  "Explore MORE")
+                                              .toUpperCase(),
+                                          style: const TextStyle(
+                                            fontSize: 13,
+                                            fontWeight: FontWeight.bold,
+                                          ),
                                         ),
                                       ),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                    )
-                    // Expanded(
-                    //   flex: constraints.maxWidth > 720 ? 1 : 0,
-                    //   child: ,
-                    // )
-                  ],
-                ),
-              );
-            }),
+                              ],
+                            )
+                          ],
+                        ),
+                      )
+                      // Expanded(
+                      //   flex: constraints.maxWidth > 720 ? 1 : 0,
+                      //   child: ,
+                      // )
+                    ],
+                  ),
+                );
+              },
+            ),
           );
         },
       ),
