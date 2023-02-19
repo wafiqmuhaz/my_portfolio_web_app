@@ -43,29 +43,23 @@ class ProjectModel {
       ],
       buttonText: 'Github Link',
     ),
-    // ProjectModel(
-    //   project: 'Swift App',
-    //   title: 'Cross The Road Game',
-    //   description: 'Cross the Road game developed using Swift and SceneKit',
-    //   appPhotos: AppConstants.crossTheRoadImage,
-    //   projectLink: 'https://github.com/AgnelSelvan/Cross-the-road',
-    //   techUsed: [
-    //     TechnologyConstants.swift,
-    //     TechnologyConstants.sceneKit,
-    //   ],
-    //   buttonText: 'Github Link',
-    // ),
-    // ProjectModel(
-    //   project: 'Flutter App',
-    //   title: 'News Up App',
-    //   description:
-    //       'This application is used basically for viewing different news. Launched the app in Amazon AppStore',
-    //   appPhotos: AppConstants.newsUpImage,
-    //   projectLink: 'https://www.amazon.com/gp/product/B08669JDX7',
-    //   techUsed: [
-    //     TechnologyConstants.flutter,
-    //   ],
-    // ),
+    ProjectModel(
+      project: 'Flutter App',
+      title: 'To Do App',
+      description: '',
+      // 'The Idea came during the pandemics to solve the issue of social distancing in supermarkets.',
+      appPhotos: AppConstants.crossTheRoadImage,
+      projectLink: 'https://github.com/wafiqmuhaz/',
+      techUsed: [
+        TechnologyConstants.flutter,
+        TechnologyConstants.firebase,
+        // TechnologyConstants.flask,
+        // TechnologyConstants.python,
+        // TechnologyConstants.razorPay
+      ],
+      buttonText: 'Github Link',
+    ),
+
     // ProjectModel(
     //   project: 'Flutter App',
     //   title: 'Music Lab',

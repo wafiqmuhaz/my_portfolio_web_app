@@ -1,4 +1,4 @@
-// ignore_for_file: library_private_types_in_public_api, always_use_package_imports, use_super_parameters, sort_constructors_first, lines_longer_than_80_chars, always_put_required_named_parameters_first, strict_raw_type
+// ignore_for_file: library_private_types_in_public_api, always_use_package_imports, use_super_parameters, sort_constructors_first, lines_longer_than_80_chars, always_put_required_named_parameters_first, strict_raw_type, unused_import, unused_field, sized_box_shrink_expand
 
 import 'package:flutter/material.dart';
 
@@ -54,7 +54,7 @@ class _CustomSwitchState extends State<CustomSwitch>
     return AnimatedBuilder(
       animation: _animationController,
       builder: (context, child) {
-        return Container(
+        return const SizedBox(
           height: 0,
           width: 0,
         );
