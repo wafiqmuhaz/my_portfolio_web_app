@@ -188,10 +188,30 @@ class _AboutSectionState extends State<AboutSection> {
                     ScreenHelper.isTablet(context))
                   Expanded(
                     flex: constraints.maxWidth > 720 ? 1 : 0,
-                    child: SvgPicture.asset(
-                      AppConstants.personSvg,
-                      width: constraints.maxWidth > 720 ? null : 350,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          width: 10,
+                          color: Colors.grey,
+                        ),
+                        borderRadius: BorderRadius.circular(
+                          20,
+                        ),
+                      ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(
+                          12,
+                        ),
+                        child: Image.asset(
+                          AppConstants.meImages,
+                          width: constraints.maxWidth > 720 ? null : 350,
+                        ),
+                      ),
                     ),
+                    // SvgPicture.asset(
+                    //   AppConstants.personSvg,
+                    //   width: constraints.maxWidth > 720 ? null : 350,
+                    // ),
                   ),
               ],
             ),

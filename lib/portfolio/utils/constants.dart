@@ -1,4 +1,4 @@
-// ignore_for_file: always_use_package_imports, unnecessary_lambdas
+// ignore_for_file: always_use_package_imports, unnecessary_lambdas, unused_field
 
 import 'package:flutter/material.dart';
 
@@ -28,7 +28,10 @@ class AppConstants {
 
   static const _svg = '${_assets}svg/';
   static const guySvg = '${_svg}guy.svg';
-  static const personSvg = '${_svg}person.svg';
+  // static const personSvg = '${_svg}person.svg';
+
+  static const _me = '${_assets}me/';
+  static const meImages = '${_me}me.jpg';
 
   static const _images = '${_assets}images/';
 
