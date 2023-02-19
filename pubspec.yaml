@@ -33,3 +33,12 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
+
+  assets:
+    - assets/
+    - assets/svg/
+    - assets/images/
+    - assets/images/social/
+    - assets/images/projects/
+    - assets/images/technology/
+    # - outputs/gif/
