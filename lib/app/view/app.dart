@@ -44,7 +44,7 @@ class App extends StatelessWidget {
                   color: Colors.blueAccent, //kBackgroundColor,
                 ),
               ),
-              home: CounterPage(),
+              home: Home(),
             ),
           );
         },
