@@ -1,7 +1,6 @@
-// ignore_for_file: avoid_unnecessary_containers, always_use_package_imports
+// ignore_for_file: avoid_unnecessary_containers, always_use_package_imports, avoid_redundant_argument_values
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
 import 'package:my_portfolio_web_app/l10n/l10n.dart';
 import '../../../models/carousel_item_model.dart';
@@ -110,7 +109,7 @@ List<CarouselItemModel> carouselItems(
                       ),
                       child: TextButton(
                         onPressed: () {
-                          Utilty.openUrl(AppConstants.linkedInUrl);
+                          Utilty.openUrl('https://wafiqmuhaz.showwcase.com/');
                         },
                         child: Text(
                           l10n.letsTalk,
@@ -126,28 +125,33 @@ List<CarouselItemModel> carouselItems(
                 ],
               ),
             ),
-            MouseRegion(
-              cursor: SystemMouseCursors.click,
-              child: SizedBox(
-                height: carouselContainerHeight - 70,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: AppConstants.socialLoginDatas
-                      .map(
-                        (e) => InkWell(
-                          onTap: e.onTap,
-                          child: Container(
-                            width: 20,
-                            height: 20,
-                            margin: const EdgeInsets.all(10),
-                            child: Image.asset(e.title),
-                          ),
-                        ),
-                      )
-                      .toList(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                MouseRegion(
+                  cursor: SystemMouseCursors.click,
+                  child: SizedBox(
+                    height: carouselContainerHeight - 120,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: AppConstants.socialLoginDatas
+                          .map(
+                            (e) => InkWell(
+                              onTap: e.onTap,
+                              child: Container(
+                                width: 20,
+                                height: 20,
+                                margin: const EdgeInsets.all(10),
+                                child: Image.asset(e.title),
+                              ),
+                            ),
+                          )
+                          .toList(),
+                    ),
+                  ),
                 ),
-              ),
+              ],
             )
           ],
         ),
