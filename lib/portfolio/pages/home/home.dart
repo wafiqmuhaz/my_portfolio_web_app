@@ -76,7 +76,7 @@ class _HomeState extends ConsumerState<Home>
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       const Text(
-                        'Portfolio',
+                        'Projects',
                         style: TextStyle(
                           fontWeight: FontWeight.w900,
                           fontSize: 36,
@@ -87,19 +87,22 @@ class _HomeState extends ConsumerState<Home>
                         // ),
                       ),
                       const SizedBox(
-                        height: 5,
+                        height: 15,
                       ),
-                      Text(
-                        'Here are some of my Previous Work :)',
-                        style: TextStyle(
-                          color: Colors.grey[400],
-                          fontSize: 14,
-                        )
-                        // style: GoogleFonts.josefinSans(
-                        //   color: Colors.grey[400],
-                        //   fontSize: 14,
-                        // ),
-                        ,
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.85,
+                        child: Text(
+                          'I would like to emphasize that the following projects are not entirely mine as some of them have been developed for the company I work for and some others for clients or clients of my clients, while the backend side is provided.',
+                          style: TextStyle(
+                            color: Colors.grey[400],
+                            fontSize: 14,
+                          )
+                          // style: GoogleFonts.josefinSans(
+                          //   color: Colors.grey[400],
+                          //   fontSize: 14,
+                          // ),
+                          ,
+                        ),
                       ),
                       const SizedBox(
                         height: 15,

@@ -62,7 +62,7 @@ class _DemoScreenState extends ConsumerState<DemoScreen> {
                         height: 5,
                       ),
                       Text(
-                        'Here are some of my Demos :)',
+                        'I would like to emphasize that the following projects are not entirely mine as some of them have been developed for the company I work for and some others for clients or clients of my clients, while the backend side is provided.',
                         style: TextStyle(
                           fontWeight: FontWeight.w900,
                           fontSize: 36,

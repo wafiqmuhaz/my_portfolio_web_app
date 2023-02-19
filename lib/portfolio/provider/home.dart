@@ -58,7 +58,7 @@ class HomeProvider extends ChangeNotifier {
       scrollToHome();
     } else if (nameOnTap.title == 'Services') {
       scrollToService();
-    } else if (nameOnTap.title == 'Portfolio') {
+    } else if (nameOnTap.title == 'Projects') {
       scrollToPortfolio();
     } else if (nameOnTap.title == 'About') {
       scrollToAbout();
