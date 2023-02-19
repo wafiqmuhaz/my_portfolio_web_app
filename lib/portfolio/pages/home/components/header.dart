@@ -32,7 +32,9 @@ class HeaderLogo extends StatelessWidget {
                   TextSpan(
                     text: 'Wafiq ',
                     style: TextStyle(
-                      color: kCaptionColor,
+                      //   color: ref.watch(themeProvider).isDarkMode
+                      //       ? Colors.white
+                      //       : Colors.black,
                       height: 1.5,
                       fontSize: 15,
                     ),

@@ -6,8 +6,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../models/project.dart';
 import '../../provider/home.dart';
+import '../../provider/theme.dart';
 import '../../utils/globals.dart';
 import '../../utils/screen_helper.dart';
+import '../../widgets/switch.dart';
 import 'components/about.dart';
 import 'components/carousel.dart';
 import 'components/footer.dart';
@@ -119,22 +121,22 @@ class _HomeState extends ConsumerState<Home>
             ),
           ),
         ),
-        // Header(
-        //   themeSwitch: ThemeSwitcher(
-        //       clipper: const ThemeSwitcherBoxClipper(),
-        //       builder: (context) {
-        //         return CustomSwitch(
-        //           value: ref.watch(themeProvider).isDarkMode,
-        //           onChanged: (val) {
-        //             ref.read(themeProvider).changeTheme(val);
-        //             ThemeSwitcher.of(context).changeTheme(
-        //                 theme: ref.read(themeProvider).getCurrentTheme,
-        //                 isReversed: false // default: false
-        //                 );
-        //           },
-        //         );
-        //       }),
-        // ),
+        Header(
+          themeSwitch: ThemeSwitcher(
+              clipper: const ThemeSwitcherBoxClipper(),
+              builder: (context) {
+                return CustomSwitch(
+                  value: ref.watch(themeProvider).isDarkMode,
+                  onChanged: (val) {
+                    ref.read(themeProvider).changeTheme(val);
+                    ThemeSwitcher.of(context).changeTheme(
+                        theme: ref.read(themeProvider).getCurrentTheme,
+                        isReversed: false // default: false
+                        );
+                  },
+                );
+              }),
+        ),
       ],
     );
   }
@@ -172,20 +174,20 @@ class _HomeState extends ConsumerState<Home>
                     ),
                     trailing: HeaderRow.headerItems[index].isDarkTheme != null
                         ? HeaderRow.headerItems[index].isDarkTheme!
-                            ? const SizedBox(
+                            ? SizedBox(
                                 width: 50,
-                                // child: CustomSwitch(
-                                //   value: ref.watch(themeProvider).isDarkMode,
-                                //   onChanged: (val) {
-                                //     ref.read(themeProvider).changeTheme(val);
-                                //     ThemeSwitcher.of(context).changeTheme(
-                                //         theme: ref
-                                //             .read(themeProvider)
-                                //             .getCurrentTheme,
-                                //         isReversed: false // default: false
-                                //         );
-                                //   },
-                                // ),
+                                child: CustomSwitch(
+                                  value: ref.watch(themeProvider).isDarkMode,
+                                  onChanged: (val) {
+                                    ref.read(themeProvider).changeTheme(val);
+                                    ThemeSwitcher.of(context).changeTheme(
+                                        theme: ref
+                                            .read(themeProvider)
+                                            .getCurrentTheme,
+                                        isReversed: false // default: false
+                                        );
+                                  },
+                                ),
                               )
                             : null
                         : null,

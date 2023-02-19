@@ -7,6 +7,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../portfolio/pages/home/home.dart';
 import '../../portfolio/provider/theme.dart';
+import '../../portfolio/utils/constants.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -22,6 +23,10 @@ class App extends StatelessWidget {
                 : MyThemes.lightTheme,
             child: MaterialApp(
               debugShowCheckedModeBanner: false,
+              theme: ThemeData(
+                primaryColor: kPrimaryColor,
+                primarySwatch: Colors.yellow,
+              ),
               // theme: ThemeData(
               //   appBarTheme: const AppBarTheme(color: Color(0xFF13B9FF)),
               //   colorScheme: ColorScheme.fromSwatch(
@@ -41,7 +46,7 @@ class App extends StatelessWidget {
                   const ResponsiveBreakpoint.resize(2460, name: '4K'),
                 ],
                 background: Container(
-                  color: Colors.blueAccent, //kBackgroundColor,
+                  color: kBackgroundColor,
                 ),
               ),
               home: Home(),
