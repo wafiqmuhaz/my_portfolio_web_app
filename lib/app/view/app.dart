@@ -3,6 +3,8 @@ import 'package:my_portfolio_web_app/counter/counter.dart';
 import 'package:my_portfolio_web_app/l10n/l10n.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
+import '../../portfolio/pages/home/home.dart';
+
 class App extends StatelessWidget {
   const App({super.key});
 
@@ -31,7 +33,7 @@ class App extends StatelessWidget {
           color: Colors.blueAccent, //kBackgroundColor,
         ),
       ),
-      home: const CounterPage(),
+      home: const Home(),
     );
   }
 }
