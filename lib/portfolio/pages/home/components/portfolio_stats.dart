@@ -61,6 +61,7 @@ class PortfolioStats extends StatelessWidget {
                           child: Text(
                             stat.count,
                             style: const TextStyle(
+                              color: kPrimaryColor,
                               fontWeight: FontWeight.w700,
                               fontSize: 32,
                             ),
