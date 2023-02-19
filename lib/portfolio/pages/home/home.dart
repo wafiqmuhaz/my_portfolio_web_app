@@ -2,8 +2,11 @@
 
 import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../l10n/l10n.dart';
+import '../../../lang/lang.dart';
 import '../../models/project.dart';
 import '../../provider/home.dart';
 import '../../provider/theme.dart';
@@ -41,7 +44,8 @@ class _HomeState extends ConsumerState<Home>
     super.dispose();
   }
 
-  Widget _buildPage() {
+  Widget _buildPage(BuildContext context) {
+    var l10n = context.l10n;
     return Stack(
       children: [
         ScrollConfiguration(
@@ -75,9 +79,9 @@ class _HomeState extends ConsumerState<Home>
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      const Text(
-                        'Projects',
-                        style: TextStyle(
+                      Text(
+                        l10n.kProjects,
+                        style: const TextStyle(
                           fontWeight: FontWeight.w900,
                           fontSize: 36,
                         ),
@@ -92,7 +96,7 @@ class _HomeState extends ConsumerState<Home>
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.85,
                         child: Text(
-                          'I would like to emphasize that the following projects are not entirely mine as some of them have been developed for the company I work for and some others for clients or clients of my clients, while the backend side is provided.',
+                          l10n.kProjectsDesc,
                           style: TextStyle(
                             color: Colors.grey[400],
                             fontSize: 14,
@@ -215,7 +219,35 @@ class _HomeState extends ConsumerState<Home>
             ),
           ),
         ),
-        body: _buildPage(),
+        body: _buildPage(context),
+        floatingActionButton: PopupMenuButton(
+          icon: const Icon(
+            Icons.more_vert,
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(
+              20,
+            ),
+          ),
+          elevation: 1,
+          itemBuilder: (context) {
+            return AppLocalizations.supportedLocales.map(
+              (locale) {
+                return PopupMenuItem<String>(
+                  value: locale.languageCode,
+                  child: Text(
+                    Utils.localeToCountryName(locale),
+                  ),
+                );
+              },
+            ).toList();
+          },
+          onSelected: (value) {
+            context.read<ConfigCubit>().changeLanguage(
+                  Locale(value),
+                );
+          },
+        ),
       ),
     );
   }

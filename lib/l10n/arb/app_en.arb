@@ -3,5 +3,78 @@
     "counterAppBarTitle": "Counter",
     "@counterAppBarTitle": {
         "description": "Text shown in the AppBar of the Counter Page"
+    },
+    "flutterDeveloper": "Flutter Application Developer",
+    "@flutterDeveloper": {
+        "description": "The Flutter Developer"
+    },
+    "flutterEngineer": "Flutter Engineer",
+    "@flutterEngineer": {
+        "description": "Status in flutter"
+    },
+    "letsTalk": "Let's Talk",
+    "@letsTalk": {
+        "description": "Let's Talk"
+    },
+    "kAboutMe": "About Me",
+    "@kAboutMe": {
+        "description": "About Me"
+    },
+    "kAboutMeTitle": "I'm Wafiq Muhaz, A Flutter Developer",
+    "@kAboutMeTitle": {
+        "description": "Title About Me"
+    },
+    "kAboutMeDesc": "I am currently pursuing a bachelor's degree in Computer Science with a specialization in Information Technology. I have been passionate about mobile app development and have gained valuable experience in this field with one year of practical experience. During this time, I have worked both independently and as a part of a team in developing various applications.",
+    "@kAboutMeDesc": {
+        "description": "Description About Me"
+    },
+    "kAboutMeDesc2": "In addition to my technical skills, I have a strong ability to work collaboratively with others and communicate complex technical concepts effectively. I am always eager to learn and explore new technologies to further enhance my skills and knowledge.",
+    "@kAboutMeDesc2": {
+        "description": "Second Description About Me"
+    },
+    "kTechStack": "Technology I have worked with",
+    "@kTechStack": {
+        "description": "Tech Stack"
+    },
+    "kProductive": "Productive",
+    "@kProductive": {
+        "description": "Productive"
+    },
+    "kExperienced": "Experienced",
+    "@kExperienced": {
+        "description": "Experienced"
+    },
+    "kDownloadCV": "DOWNLOAD CV",
+    "@kDownloadCV": {
+        "description": "Download CV here"
+    },
+    "kWhatIdo": "What I Do?",
+    "@kWhatIdo": {
+        "description": "What I Do now?"
+    },
+    "kWhatIdoDesc": "I may not be perfect, but I'm surely of some help",
+    "@kWhatIdoDesc": {
+        "description": "Desc About What I Do now"
+    },
+    "kProjects": "Projects",
+    "@kProjects": {
+        "description": "my Projects"
+    },
+    "kProjectsDesc": "I would like to emphasize that the following projects are not entirely mine as some of them have been developed for the company I work for and some others for clients, while the backend side is provided.",
+    "@kProjectsDesc": {
+        "description": "my Projects Desc"
+    },
+    "kTechUsed": "Technologies Used",
+    "@kTechUsed": {
+        "description": "Technologies Used"
+    },
+    "kEndFooter": "Developed in 💛 with Flutter",
+    "@kEndFooter": {
+        "description": "by Flutter"
+    },
+    "kHome": "Home",
+    "@kHome": {
+        "description": "Home"
     }
+
 }

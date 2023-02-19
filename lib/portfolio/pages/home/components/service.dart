@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:my_portfolio_web_app/l10n/l10n.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../../models/design_process.dart';
@@ -67,6 +68,7 @@ class ServiceSection extends StatelessWidget {
   }
 
   Widget _buildUi(BuildContext context, double width) {
+    var l10n = context.l10n;
     return ResponsiveWrapper(
       maxWidth: width,
       minWidth: width,
@@ -77,9 +79,9 @@ class ServiceSection extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text(
-                'Productive ,\n   Experienced',
-                style: TextStyle(
+              Text(
+                '${l10n.kProductive} ,\n   ${l10n.kExperienced}',
+                style: const TextStyle(
                   fontWeight: FontWeight.w900,
                   height: 1.8,
                   letterSpacing: 2,
@@ -99,11 +101,11 @@ class ServiceSection extends StatelessWidget {
                     // 'https://github.com/AgnelSelvan/AgnelSelvan.github.io/raw/main/assets/files/Agnel-Selvan.pdf',
                   );
                 },
-                child: const MouseRegion(
+                child: MouseRegion(
                   cursor: SystemMouseCursors.click,
                   child: Text(
-                    'DOWNLOAD CV',
-                    style: TextStyle(
+                    l10n.kDownloadCV,
+                    style: const TextStyle(
                       color: kPrimaryColor,
                       fontWeight: FontWeight.w900,
                       fontSize: 16,
@@ -120,9 +122,9 @@ class ServiceSection extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          const Text(
-            'What I Do?',
-            style: TextStyle(
+          Text(
+            l10n.kWhatIdo,
+            style: const TextStyle(
               fontWeight: FontWeight.w900,
               height: 1.3,
               fontSize: 35,
@@ -137,7 +139,7 @@ class ServiceSection extends StatelessWidget {
             height: 5,
           ),
           Text(
-            "I may not be perfect, but I'm surely of some help",
+            l10n.kWhatIdoDesc,
             style: TextStyle(
               color: Colors.grey[400],
               fontSize: 14,

@@ -1,0 +1,25 @@
+{
+    "@@locale": "id",
+    "counterAppBarTitle": "Penghitung",
+    "@counterAppBarTitle": {
+        "description": "Teks yang ditampilkan di AppBar pada Halaman Penghitung"
+    },
+    "flutterDeveloper": "Pengembang Aplikasi Flutter",
+    "flutterEngineer": "Insinyur Flutter",
+    "letsTalk": "Ayo Bicara",
+    "kAboutMe": "Tentang Saya",
+    "kAboutMeTitle": "Saya Wafiq Muhaz, seorang pengembang Flutter",
+    "kAboutMeDesc": "Saat ini saya sedang menempuh pendidikan sarjana di jurusan Ilmu Komputer dengan spesialisasi di bidang Teknologi Informasi. Saya memiliki minat yang besar dalam pengembangan aplikasi mobile dan telah memperoleh pengalaman berharga di bidang ini selama satu tahun dengan pengalaman praktis. Selama waktu tersebut, saya telah bekerja secara mandiri dan sebagai bagian dari tim dalam mengembangkan berbagai aplikasi.",
+    "kAboutMeDesc2": "Selain keterampilan teknis, saya memiliki kemampuan yang kuat untuk bekerja secara kolaboratif dengan orang lain dan mengomunikasikan konsep teknis yang kompleks dengan efektif. Saya selalu bersemangat untuk belajar dan mengeksplorasi teknologi baru untuk lebih meningkatkan keterampilan dan pengetahuan saya.",
+    "kTechStack": "Teknologi yang pernah saya kerjakan",
+    "kProductive": "Produktif",
+    "kExperienced": "Berpengalaman",
+    "kDownloadCV": "UNDUH CV",
+    "kWhatIdo": "Apa yang dapat saya lakukan?",
+    "kWhatIdoDesc": "Saya mungkin tidak sempurna, tetapi saya pasti bisa membantu",
+    "kProjects": "Proyek",
+    "kProjectsDesc": "Saya ingin menekankan bahwa proyek-proyek berikut bukan sepenuhnya karya saya, karena beberapa di antaranya telah dikembangkan untuk perusahaan tempat saya bekerja, dan beberapa lagi untuk klien, sedangkan sisi backend disediakan.",
+    "kTechUsed": "Teknologi yang digunakan",
+    "kEndFooter": "Dikembangkan menggunakan 💛 dengan Flutter",
+    "kHome": "Utama"
+}

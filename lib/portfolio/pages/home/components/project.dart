@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:my_portfolio_web_app/l10n/l10n.dart';
 
 import '../../../models/project.dart';
 import '../../../provider/theme.dart';
@@ -53,6 +54,7 @@ class ProjectSection extends StatelessWidget {
     return Center(
       child: LayoutBuilder(
         builder: (context, constraints) {
+          var l10n = context.l10n;
           return SizedBox(
             width: width,
             child: Consumer(

@@ -33,7 +33,7 @@ class Carousel extends StatelessWidget {
                 height: carouselContainerHeight,
               ),
               items: List.generate(
-                carouselItems(carouselContainerHeight).length,
+                carouselItems(carouselContainerHeight, context).length,
                 (index) => Builder(
                   builder: (BuildContext context) {
                     return Container(
@@ -44,18 +44,24 @@ class Carousel extends StatelessWidget {
                         // Responsive views
                         desktop: _buildDesktop(
                           context,
-                          carouselItems(carouselContainerHeight)[index].text,
-                          carouselItems(carouselContainerHeight)[index].image,
+                          carouselItems(carouselContainerHeight, context)[index]
+                              .text,
+                          carouselItems(carouselContainerHeight, context)[index]
+                              .image,
                         ),
                         tablet: _buildTablet(
                           context,
-                          carouselItems(carouselContainerHeight)[index].text,
-                          carouselItems(carouselContainerHeight)[index].image,
+                          carouselItems(carouselContainerHeight, context)[index]
+                              .text,
+                          carouselItems(carouselContainerHeight, context)[index]
+                              .image,
                         ),
                         mobile: _buildMobile(
                           context,
-                          carouselItems(carouselContainerHeight)[index].text,
-                          carouselItems(carouselContainerHeight)[index].image,
+                          carouselItems(carouselContainerHeight, context)[index]
+                              .text,
+                          carouselItems(carouselContainerHeight, context)[index]
+                              .image,
                         ),
                       ),
                     );

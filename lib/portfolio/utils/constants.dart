@@ -27,8 +27,11 @@ class AppConstants {
   static const _outputs = 'outputs/';
 
   static const _svg = '${_assets}svg/';
-  static const guySvg = '${_svg}guy.svg';
+  // static const guySvg = '${_svg}guy.svg';
   // static const personSvg = '${_svg}person.svg';
+
+  static const _lottie = '${_assets}lottie/';
+  static const devlottie = '${_lottie}developer.json';
 
   static const _me = '${_assets}me/';
   static const meImages = '${_me}me.jpg';

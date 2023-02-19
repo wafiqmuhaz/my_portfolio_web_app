@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:my_portfolio_web_app/l10n/l10n.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../../models/technology.dart';
@@ -31,6 +32,7 @@ class _AboutSectionState extends State<AboutSection> {
     return Center(
       child: LayoutBuilder(
         builder: (context, constraints) {
+          var l10n = context.l10n;
           return ResponsiveWrapper(
             maxWidth: width,
             minWidth: width,
@@ -48,9 +50,9 @@ class _AboutSectionState extends State<AboutSection> {
                       const SizedBox(
                         height: 15,
                       ),
-                      const Text(
-                        'About Me',
-                        style: TextStyle(
+                      Text(
+                        l10n.kAboutMe,
+                        style: const TextStyle(
                           fontWeight: FontWeight.w900,
                           height: 1.3,
                           fontSize: 35,
@@ -64,9 +66,9 @@ class _AboutSectionState extends State<AboutSection> {
                       const SizedBox(
                         height: 25,
                       ),
-                      const Text(
-                        "I'm Wafiq Muhaz, A Flutter Developer",
-                        style: TextStyle(
+                      Text(
+                        l10n.kAboutMeTitle,
+                        style: const TextStyle(
                           fontWeight: FontWeight.w900,
                           height: 1.3,
                           fontSize: 35,
@@ -80,9 +82,9 @@ class _AboutSectionState extends State<AboutSection> {
                       const SizedBox(
                         height: 10,
                       ),
-                      const Text(
-                        "I am currently pursuing a bachelor's degree in Computer Science with a specialization in Information Technology. I have been passionate about mobile app development and have gained valuable experience in this field with one year of practical experience. During this time, I have worked both independently and as a part of a team in creating various applications.",
-                        style: TextStyle(
+                      Text(
+                        l10n.kAboutMeDesc,
+                        style: const TextStyle(
                           color: kCaptionColor,
                           height: 1.5,
                           fontSize: 15,
@@ -91,9 +93,9 @@ class _AboutSectionState extends State<AboutSection> {
                       const SizedBox(
                         height: 12,
                       ),
-                      const Text(
-                        'In addition to my technical skills, I have a strong ability to work collaboratively with others and communicate complex technical concepts effectively. I am always eager to learn and explore new technologies to further enhance my skills and knowledge.',
-                        style: TextStyle(
+                      Text(
+                        l10n.kAboutMeDesc2,
+                        style: const TextStyle(
                           color: kCaptionColor,
                           height: 1.5,
                           fontSize: 15,
@@ -102,9 +104,9 @@ class _AboutSectionState extends State<AboutSection> {
                       const SizedBox(
                         height: 20,
                       ),
-                      const Text(
-                        'Technology I have worked with',
-                        style: TextStyle(
+                      Text(
+                        l10n.kTechStack,
+                        style: const TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
                         ),

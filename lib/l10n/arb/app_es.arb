@@ -3,5 +3,23 @@
     "counterAppBarTitle": "Contador",
     "@counterAppBarTitle": {
         "description": "Texto mostrado en la AppBar de la página del contador"
-    }
+    },
+    "flutterDeveloper": "Desarrollador de aplicaciones Flutter",
+    "flutterEngineer": "Ingeniero de Flutter",
+    "letsTalk": "Hablemos",
+    "kAboutMe": "Sobre mí",
+    "kAboutMeTitle": "Soy Wafiq Muhaz, un desarrollador de Flutter",
+    "kAboutMeDesc": "Actualmente estoy persiguiendo una licenciatura en Ciencias de la Computación con especialización en Tecnología de la Información. He sido apasionado por el desarrollo de aplicaciones móviles y he adquirido experiencia valiosa en este campo con un año de experiencia práctica. Durante este tiempo, he trabajado tanto de manera independiente como como parte de un equipo en el desarrollo de varias aplicaciones.",
+    "kAboutMeDesc2": "Además de mis habilidades técnicas, tengo una fuerte capacidad para trabajar en colaboración con otros y comunicar conceptos técnicos complejos de manera efectiva. Siempre estoy ansioso por aprender y explorar nuevas tecnologías para mejorar aún más mis habilidades y conocimientos.",
+    "kTechStack": "Tecnología con la que he trabajado",
+    "kProductive": "Productivo",
+    "kExperienced": "Experimentado",
+    "kDownloadCV": "DESCARGAR CV",
+    "kWhatIdo": "¿Qué hago?",
+    "kWhatIdoDesc": "No soy perfecto, pero seguro que puedo ayudar en algo",
+    "kProjects": "Proyectos",
+    "kProjectsDesc": "Me gustaría enfatizar que los siguientes proyectos no son completamente míos, ya que algunos de ellos han sido desarrollados para la empresa para la que trabajo y otros para clientes, mientras que el lado del backend es proporcionado.",
+    "kTechUsed": "Tecnologías utilizadas",
+    "kEndFooter": "Desarrollado en 💛 con Flutter",
+    "kHome": "Homehogar"
 }

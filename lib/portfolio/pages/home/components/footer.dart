@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers, always_use_package_imports, unnecessary_lambdas, lines_longer_than_80_chars, use_super_parameters, avoid_redundant_argument_values
 
 import 'package:flutter/material.dart';
+import 'package:my_portfolio_web_app/l10n/l10n.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../../models/footer_item.dart';
@@ -70,6 +71,7 @@ Widget _buildUi(double width, BuildContext context) {
       defaultScale: false,
       child: LayoutBuilder(
         builder: (context, constraints) {
+          var l10n = context.l10n;
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -155,12 +157,12 @@ Widget _buildUi(double width, BuildContext context) {
               Flex(
                 direction: Axis.horizontal,
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
+                children: [
                   Padding(
-                    padding: EdgeInsets.only(bottom: 8),
+                    padding: const EdgeInsets.only(bottom: 8),
                     child: Text(
-                      'Developed in 💛 with Flutter',
-                      style: TextStyle(
+                      l10n.kEndFooter,
+                      style: const TextStyle(
                         color: kCaptionColor,
                       ),
                     ),
