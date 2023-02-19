@@ -65,7 +65,7 @@ class ProjectModel {
       title: 'Hararu App',
       description: '',
       // 'The Idea came during the pandemics to solve the issue of social distancing in supermarkets.',
-      appPhotos: AppConstants.crossTheRoadImage,
+      appPhotos: AppConstants.newsUpImage,
       projectLink:
           'https://play.google.com/store/apps/details?id=com.xetia.hararu01&hl=id&gl=US',
       techUsed: [
