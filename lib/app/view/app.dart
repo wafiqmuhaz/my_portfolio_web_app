@@ -11,6 +11,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 import '../../lang/lang.dart';
 import '../../portfolio/pages/home/home.dart';
 import '../../portfolio/provider/theme.dart';
+import '../../portfolio/routes/routes.dart';
 import '../../portfolio/utils/constants.dart';
 
 class App extends StatelessWidget {
@@ -43,6 +44,9 @@ class App extends StatelessWidget {
                 //     accentColor: const Color(0xFF13B9FF),
                 //   ),
                 // ),
+                themeMode: ref.watch(themeProvider).themeMode,
+                darkTheme: MyThemes.darkTheme,
+                onGenerateRoute: RouterGenerator.generateRoute,
                 localizationsDelegates: AppLocalizations.localizationsDelegates,
                 locale: context.watch<ConfigCubit>().state.currentLocale,
                 supportedLocales: AppLocalizations.supportedLocales,

@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers, always_use_package_imports, avoid_redundant_argument_values
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
 import 'package:my_portfolio_web_app/l10n/l10n.dart';
 import '../../../models/carousel_item_model.dart';
@@ -131,7 +132,7 @@ List<CarouselItemModel> carouselItems(
                 MouseRegion(
                   cursor: SystemMouseCursors.click,
                   child: SizedBox(
-                    height: carouselContainerHeight - 120,
+                    height: carouselContainerHeight - 70,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       crossAxisAlignment: CrossAxisAlignment.end,
