@@ -70,7 +70,7 @@ class ProjectModel {
           'https://play.google.com/store/apps/details?id=com.xetia.hararu01&hl=id&gl=US',
       techUsed: [
         TechnologyConstants.flutter,
-        TechnologyConstants.firebase,
+        // TechnologyConstants.firebase,
         // TechnologyConstants.flask,
         // TechnologyConstants.python,
         // TechnologyConstants.razorPay

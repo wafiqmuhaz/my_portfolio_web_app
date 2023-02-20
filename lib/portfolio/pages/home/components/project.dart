@@ -28,23 +28,25 @@ class ProjectSection extends StatelessWidget {
   Widget _buildUi(double width, BuildContext context) {
     return ScrollConfiguration(
       behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
-      child: SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        child: Row(
-          children: projects
-              .map(
-                (e) => Container(
-                  margin: const EdgeInsets.symmetric(
-                    horizontal: 20,
-                    vertical: 15,
+      child: RawScrollbar(
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: projects
+                .map(
+                  (e) => Container(
+                    margin: const EdgeInsets.symmetric(
+                      horizontal: 20,
+                      vertical: 15,
+                    ),
+                    child: _buildProject(
+                      width,
+                      e,
+                    ),
                   ),
-                  child: _buildProject(
-                    width,
-                    e,
-                  ),
-                ),
-              )
-              .toList(),
+                )
+                .toList(),
+          ),
         ),
       ),
     );
