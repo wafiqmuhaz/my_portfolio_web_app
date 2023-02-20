@@ -1,8 +1,7 @@
-// ignore_for_file: lines_longer_than_80_chars, always_use_package_imports, use_super_parameters, avoid_redundant_argument_values
+// ignore_for_file: lines_longer_than_80_chars, always_use_package_imports, use_super_parameters, avoid_redundant_argument_values, prefer_final_locals, use_decorated_box
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:my_portfolio_web_app/l10n/l10n.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 

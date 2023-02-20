@@ -1,4 +1,4 @@
-// ignore_for_file: always_use_package_imports, use_super_parameters, avoid_redundant_argument_values, lines_longer_than_80_chars, no_leading_underscores_for_local_identifiers, use_named_constants
+// ignore_for_file: always_use_package_imports, use_super_parameters, avoid_redundant_argument_values, lines_longer_than_80_chars, no_leading_underscores_for_local_identifiers, use_named_constants, prefer_final_locals
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

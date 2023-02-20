@@ -1,4 +1,4 @@
-// ignore_for_file: always_use_package_imports, unnecessary_lambdas, unused_field
+// ignore_for_file: always_use_package_imports, unnecessary_lambdas, unused_field, lines_longer_than_80_chars
 
 import 'package:flutter/material.dart';
 

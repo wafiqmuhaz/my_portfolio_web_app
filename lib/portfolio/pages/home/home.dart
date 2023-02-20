@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_overrides, always_use_package_imports, use_super_parameters, unused_import, lines_longer_than_80_chars, avoid_redundant_argument_values
+// ignore_for_file: unnecessary_overrides, always_use_package_imports, use_super_parameters, unused_import, lines_longer_than_80_chars, avoid_redundant_argument_values, prefer_final_locals
 
 import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 import 'package:flutter/material.dart';

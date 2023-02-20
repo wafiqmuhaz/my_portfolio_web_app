@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_unnecessary_containers, use_super_parameters, sort_constructors_first, always_put_required_named_parameters_first, lines_longer_than_80_chars, always_use_package_imports, prefer_single_quotes, prefer_if_elements_to_conditional_expressions
+// ignore_for_file: avoid_unnecessary_containers, use_super_parameters, sort_constructors_first, always_put_required_named_parameters_first, lines_longer_than_80_chars, always_use_package_imports, prefer_single_quotes, prefer_if_elements_to_conditional_expressions, unused_local_variable, prefer_final_locals
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -28,25 +28,23 @@ class ProjectSection extends StatelessWidget {
   Widget _buildUi(double width, BuildContext context) {
     return ScrollConfiguration(
       behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
-      child: RawScrollbar(
-        child: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
-            children: projects
-                .map(
-                  (e) => Container(
-                    margin: const EdgeInsets.symmetric(
-                      horizontal: 20,
-                      vertical: 15,
-                    ),
-                    child: _buildProject(
-                      width,
-                      e,
-                    ),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: projects
+              .map(
+                (e) => Container(
+                  margin: const EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: 15,
                   ),
-                )
-                .toList(),
-          ),
+                  child: _buildProject(
+                    width,
+                    e,
+                  ),
+                ),
+              )
+              .toList(),
         ),
       ),
     );

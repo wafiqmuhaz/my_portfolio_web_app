@@ -1,7 +1,6 @@
-// ignore_for_file: avoid_unnecessary_containers, always_use_package_imports, avoid_redundant_argument_values
+// ignore_for_file: avoid_unnecessary_containers, always_use_package_imports, avoid_redundant_argument_values, lines_longer_than_80_chars, prefer_final_locals
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
 import 'package:my_portfolio_web_app/l10n/l10n.dart';
 import '../../../models/carousel_item_model.dart';
