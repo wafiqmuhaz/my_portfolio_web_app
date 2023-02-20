@@ -10,8 +10,8 @@ import '../../../utils/utils.dart';
 
 final List<Stat> stats = [
   // Stat(count: '43', text: 'Clients'),
-  Stat(count: '3+', text: 'Projects'),
-  Stat(count: '10', text: 'Awards'),
+  Stat(count: '4+', text: 'Projects'),
+  Stat(count: '10', text: 'Certificates'),
   Stat(count: '1', text: 'Years\nExperience'),
 ];
 

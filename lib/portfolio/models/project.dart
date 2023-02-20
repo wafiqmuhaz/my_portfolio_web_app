@@ -84,7 +84,43 @@ class ProjectModel {
       description: '',
       // 'The Idea came during the pandemics to solve the issue of social distancing in supermarkets.',
       appPhotos: AppConstants.musicLabImage,
-      projectLink: 'https://github.com/wafiqmuhaz/newsone',
+      projectLink:
+          'https://github.com/wafiqmuhaz/newsone/blob/main/newsone.apk',
+      techUsed: [
+        TechnologyConstants.flutter,
+        // TechnologyConstants.firebase,
+        // TechnologyConstants.flask,
+        // TechnologyConstants.python,
+        // TechnologyConstants.razorPay
+      ],
+      buttonText: 'Project Link',
+    ),
+
+    ProjectModel(
+      project: 'Flutter App',
+      title: 'HARTi NFT',
+      description: '',
+      // 'The Idea came during the pandemics to solve the issue of social distancing in supermarkets.',
+      appPhotos: AppConstants.personalFaceImage,
+      projectLink:
+          'https://play.google.com/store/apps/details?id=app.harti&hl=id&gl=US',
+      techUsed: [
+        TechnologyConstants.flutter,
+        // TechnologyConstants.firebase,
+        // TechnologyConstants.flask,
+        // TechnologyConstants.python,
+        // TechnologyConstants.razorPay
+      ],
+      buttonText: 'Project Link',
+    ),
+
+    ProjectModel(
+      project: 'Flutter Web / App',
+      title: 'Portfolio Web or App',
+      description: '',
+      // 'The Idea came during the pandemics to solve the issue of social distancing in supermarkets.',
+      appPhotos: AppConstants.computerStoreImage,
+      projectLink: 'https://github.com/wafiqmuhaz/my_portfolio_web_app',
       techUsed: [
         TechnologyConstants.flutter,
         // TechnologyConstants.firebase,
