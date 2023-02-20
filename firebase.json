@@ -1,10 +1,17 @@
 {
-  "hosting": {
-    "public": "build/web",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
-  }
+    "hosting": {
+        "public": "build/web",
+        "ignore": [
+            "firebase.json",
+            "**/.*",
+            "**/node_modules/**"
+        ]
+    },
+    "github": {
+        "branches": ["main"],
+        "repo": "wafiqmuhaz/my_portfolio_web_app",
+        "token": {
+            "env": "1//0gm5H5Suv3-0HCgYIARAAGBASNwF-L9IrQwM33HoABhugK-jalH3LBXcX2-DCz1YkiuTQ5anXU2ERu--mjaq7Yal4ltLyVR73iWo"
+        }
+    }
 }
