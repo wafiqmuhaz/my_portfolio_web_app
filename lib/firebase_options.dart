@@ -47,30 +47,30 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyA0GpB5XGrCH0OqUznH3mZPa4TZEnNsvFg',
-    appId: '1:320507244776:web:d2b817619035629a9e995d',
-    messagingSenderId: '320507244776',
-    projectId: 'wafiqmuhaz-web-fa8e0',
-    authDomain: 'wafiqmuhaz-web-fa8e0.firebaseapp.com',
-    storageBucket: 'wafiqmuhaz-web-fa8e0.appspot.com',
-    measurementId: 'G-0TPH5BP6YL',
+    apiKey: 'AIzaSyAGyM6N27ixr5CK3fmz3J1Ej6PnggiF2IQ',
+    appId: '1:987913900497:web:585819286ed627528fd0f0',
+    messagingSenderId: '987913900497',
+    projectId: 'wafiqmuhaz-web-app',
+    authDomain: 'wafiqmuhaz-web-app.firebaseapp.com',
+    storageBucket: 'wafiqmuhaz-web-app.appspot.com',
+    measurementId: 'G-6951S97YFV',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBrhzKnaKAuyoWGZCQaQnlEoskGnZgQgYg',
-    appId: '1:320507244776:android:bfcc63fec80734bf9e995d',
-    messagingSenderId: '320507244776',
-    projectId: 'wafiqmuhaz-web-fa8e0',
-    storageBucket: 'wafiqmuhaz-web-fa8e0.appspot.com',
+    apiKey: 'AIzaSyC860jhxyEOZEvJRFV3k0v3TO8YJuUKL3k',
+    appId: '1:987913900497:android:d34c4bcaa0dca8e68fd0f0',
+    messagingSenderId: '987913900497',
+    projectId: 'wafiqmuhaz-web-app',
+    storageBucket: 'wafiqmuhaz-web-app.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCwKdZ5YMG3HcFoKtg75cumluMcDzl55v4',
-    appId: '1:320507244776:ios:1a51e1d83366dce19e995d',
-    messagingSenderId: '320507244776',
-    projectId: 'wafiqmuhaz-web-fa8e0',
-    storageBucket: 'wafiqmuhaz-web-fa8e0.appspot.com',
-    iosClientId: '320507244776-dqv2tn68skna9l0t2htfmcnrpvuhcs8f.apps.googleusercontent.com',
+    apiKey: 'AIzaSyDDA63e4N6UF9m_DXcNIXJ4oxBU8gUkmNQ',
+    appId: '1:987913900497:ios:4227c8ed63f190808fd0f0',
+    messagingSenderId: '987913900497',
+    projectId: 'wafiqmuhaz-web-app',
+    storageBucket: 'wafiqmuhaz-web-app.appspot.com',
+    iosClientId: '987913900497-uliaeo46fpqp2v5qfdhmftss86vsphdc.apps.googleusercontent.com',
     iosBundleId: 'com.wafiqmuhaz.org.my-portfolio-web-app',
   );
 }
