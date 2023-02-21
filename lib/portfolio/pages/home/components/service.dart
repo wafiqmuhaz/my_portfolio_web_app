@@ -97,7 +97,7 @@ class ServiceSection extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   Utilty.openUrl(
-                    'https://wafiqmuhaz.showwcase.com/',
+                    'https://github.com/wafiqmuhaz/my_portfolio_web_app/blob/main/Wafiq%20Muhaz-Curriculum%20Vitae.pdf',
                     // 'https://github.com/AgnelSelvan/AgnelSelvan.github.io/raw/main/assets/files/Agnel-Selvan.pdf',
                   );
                 },
