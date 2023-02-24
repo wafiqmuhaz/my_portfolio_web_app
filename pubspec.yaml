@@ -19,7 +19,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   flutter_riverpod: ^2.2.0
-  flutter_svg: ^2.0.1
+  flutter_svg: ^2.0.2
   lottie: ^2.2.0
   responsive_framework: ^0.2.0
   url_launcher: ^6.1.9
