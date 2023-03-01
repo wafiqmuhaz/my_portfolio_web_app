@@ -18,7 +18,7 @@ dependencies:
   flutter_bloc: ^8.1.2
   flutter_localizations:
     sdk: flutter
-  flutter_riverpod: ^2.2.0
+  flutter_riverpod: ^2.3.0
   flutter_svg: ^2.0.1
   lottie: ^2.2.0
   responsive_framework: ^0.2.0
